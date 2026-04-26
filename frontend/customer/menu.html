@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="foodHub" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodHub - Menu</title>
+    <!-- Filled Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+    <!-- Brand Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../frontend/css/menu-style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="../../img/foodHUB.svg" alt="foodHUB Logo" class="nav-logo">
+        </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#">Menu</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search food...">
+                <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="cart-icon" onclick="openCart()" style="position: relative; cursor: pointer; font-size: 1.5rem; color: #727175c4; transition: color 0.3s; margin-left: 10px; margin-right: 10px;">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-badge" style="position: absolute; top: -8px; right: -10px; background: #e6741c; color: white; border-radius: 50%; padding: 2px 6px; font-size: 0.75rem; font-weight: bold; display: none;">0</span>
+            </div>
+            <div class="profile-icon">
+                <i class="fa fa-user-circle"></i>
+            </div>
+            <div class="logout-btn">
+                <button type="submit" class="logout-btn" >Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul class="filter-list" id="category-filters">
+                <li><button class="filter-btn active" data-filter="all">All</button></li>
+                <li><button class="filter-btn" data-filter="appetizer">Appetizer</button></li>
+                <li><button class="filter-btn" data-filter="beverage">Beverage</button></li>
+                <li><button class="filter-btn" data-filter="main dish">Main Dish</button></li>
+                <li><button class="filter-btn" data-filter="salad">Salad</button></li>
+                <li><button class="filter-btn" data-filter="dessert">Dessert</button></li>
+            </ul>
+        </aside>
+
+        <section class="menu-content">
+            <div class="menu-grid" id="menu-grid">
+                <!-- Food cards will be dynamically injected here by menu.js -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Cart Iframe and Overlay -->
+    <div id="cart-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.4); z-index: 1999; display: none; transition: opacity 0.3s ease;" onclick="closeCart()"></div>
+    <iframe src="cart.html" id="cart-frame" style="position: fixed; top: 0; right: -400px; width: 400px; height: 100%; border: none; z-index: 2000; transition: right 0.3s ease; background: transparent;"></iframe>
+
+    <script src="../../js/menu.js"></script>
+</body>
+</html>
