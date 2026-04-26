@@ -99,8 +99,8 @@ foodHub/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/foodHub.git
-   cd foodHub
+   git clone https://github.com/codeAFK/food-hub.git
+   cd food-hub
    ```
 
 2. **Set up the database**
