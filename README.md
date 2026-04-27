@@ -135,8 +135,8 @@ foodHub/
 - [ ] Backend API — Authentication & role-based access
 - [ ] Backend API — Menu management (CRUD)
 - [ ] Backend API — Order management
-- [ ] Frontend — Landing & login page
-- [ ] Frontend — Customer: menu browsing & cart
+- [x] Frontend — Landing & login page
+- [x] Frontend — Customer: menu browsing & cart
 - [ ] Frontend — Customer: order tracking & history
 - [ ] Frontend — Admin: dashboard & menu management
 - [ ] Frontend — Admin: order management
